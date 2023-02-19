@@ -1,0 +1,38 @@
+.address {
+  width: 280px;
+  margin: 0 auto;
+  padding: 3px 20px 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 222px;
+    padding: 3px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 317px;
+    margin: 0;
+  }
+}
+
+.address__text {
+  display: block;
+  margin: 0 0 16px 0;
+  padding-left: 19px;
+  font-style: normal;
+  background-image: url("../../img/address-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  background-size: 13px 16px;
+}
+
+.address__tel {
+  display: block;
+  padding-left: 19px;
+  font-style: normal;
+  color: @black;
+  text-decoration: none;
+  background-image: url("../../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  background-size: 13px 16px;
+}

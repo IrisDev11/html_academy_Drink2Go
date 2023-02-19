@@ -1,0 +1,171 @@
+.filter-range {
+  @media (min-width: @tablet-width) {
+    padding-left: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.filter-range__control {
+  position: relative;
+  height: 2px;
+  margin-bottom: 37px;
+  background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.filter-range__control-bar {
+  position: absolute;
+  top: -1px;
+  width: 88%;
+  height: 4px;
+  background-color: @primary-light;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 290px;
+  }
+}
+
+.filter-range__handle {
+  z-index: 2;
+  box-sizing: border-box;
+  position: absolute;
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @primary-light;
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: @white;
+    border-radius: 50%;
+  }
+
+  &:disabled {
+    border: 2px solid @base-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -11px;
+  }
+}
+
+/* Класс для для состояния disabled filter-range__control */
+.filter-range__control--disabled {
+  background-color: @base-grey;
+}
+
+.filter-range__handle:focus {
+  outline: none;
+}
+
+.filter-range__handle:hover::before,
+.filter-range__handle:focus::before {
+  background-color: @primary-opacity;
+}
+
+.filter-range__handle:active::before {
+  background-color: @base-primary;
+}
+
+.filter-range__handle--min {
+  left: 0;
+}
+
+.filter-range__handle--max {
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 21px;
+  }
+}
+
+.filter-range__interval {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 135px;
+    width: 8px;
+    height: 2px;
+    background-color: @base-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      right: 107px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      right: 155px;
+    }
+  }
+}
+
+.filter-range__input {
+  width: 104px;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background-color: @white;
+  border: 2px solid @primary-light;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: @base-grey;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid @primary-darker;
+  }
+
+  &:disabled {
+    border: 2px solid @light-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    width: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 7px;
+    width: 120px;
+  }
+}

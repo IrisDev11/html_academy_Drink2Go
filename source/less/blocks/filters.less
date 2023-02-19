@@ -1,0 +1,352 @@
+.filters {
+  min-width: 280px;
+  margin: 0 auto 15px auto;
+
+  @media (min-width: @tablet-width) {
+    width: 728px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    margin: 0 30px 0 0;
+    padding-top: 20px;
+  }
+}
+
+.filters__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filters__fieldset {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  border: none;
+}
+
+.filters__price {
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 228px;
+    margin-right: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 31px;
+  }
+}
+
+.filters__milk {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 210px;
+    margin-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.filters__country {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    width: 197px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.filters__title {
+  margin-bottom: 21px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filters__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filters__milk-item {
+  padding-left: 34px;
+
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.filters__country-item {
+  padding-left: 55px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 52px;
+  }
+}
+
+.filters__milk-label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -34px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid @base-grey;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 2px;
+    left: -30px;
+    width: 16px;
+    height: 16px;
+    background-color: @base-primary;
+    border-radius: 50%;
+  }
+}
+
+.filters__country-label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -52px;
+    width: 43px;
+    height: 24px;
+    background-color: @base-grey;
+    border: 2px solid @base-grey;
+    border-radius: 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -48px;
+    width: 19px;
+    height: 19px;
+    background-color: @white;
+    border-radius: 50%;
+  }
+}
+
+.filters__radio:checked ~ .filters__milk-label::before {
+  border: 2px solid @base-primary;
+}
+
+.filters__radio:checked ~ .filters__milk-label::after {
+  display: block;
+}
+
+.filters__radio:checked:hover ~ .filters__milk-label::after {
+  background-color: @base-primary;
+}
+
+.filters__radio:disabled ~ .filters__milk-label {
+  color: @base-grey;
+}
+
+.filters__radio:disabled ~ .filters__milk-label::before {
+  border: 2px solid @light-grey;
+}
+
+.filters__radio:disabled ~ .filters__milk-label::after {
+  background-color: @light-grey;
+}
+
+.filters__milk-label:hover::after,
+.filters__radio:focus ~ .filters__milk-label::after {
+  display: block;
+  background-color: @primary-opacity;
+}
+
+.filters__milk-label:hover::before,
+.filters__radio:focus ~ .filters__milk-label::before {
+  border: 2px solid @primary-light;
+}
+
+.filters__checkbox:checked ~ .filters__country-label::before {
+  background-color: @base-primary;
+  border: 2px solid @base-primary;
+}
+
+.filters__checkbox:checked ~ .filters__country-label::after {
+  left: -31px;
+}
+
+.filters__checkbox:disabled ~ .filters__country-label {
+  color: @base-grey;
+}
+
+.filters__checkbox:disabled ~ .filters__country-label::before {
+  background-color: @light-grey;
+  border: 2px solid @light-grey;
+}
+
+.filters__checkbox:checked:disabled ~ .filters__country-label::after {
+  background-color: @base-grey;
+}
+
+.filters__country-label:hover::before,
+.filters__checkbox:focus ~ .filters__country-label::before {
+  background-color: @primary-opacity;
+  border: 2px solid @primary-light;
+}
+
+.filters__button-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5px;
+    padding-left: 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 0;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+.filters__button {
+  display: inline-block;
+  width: 156px;
+  margin: 0 auto 0 auto;
+  padding: 11px 2px;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: @white;
+  text-align: center;
+  text-decoration: none;
+  background-color: @base-primary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: @primary-light;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 143px;
+    margin: 0 30px 0 0;
+    padding: 8px 2px 8px 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 146px;
+    padding: 8px 2px 8px 2px;
+    margin-right: 18px;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+/* Класс для состояния disabled у ссылки Применить фильтр*/
+.filters__button--disabled {
+  background-color: @base-grey;
+}
+
+.filters__button--reset {
+  font-size: 14px;
+  margin-top: 24px;
+  color: @base-primary;
+  background-color: @white;
+
+  &:hover,
+  &:focus {
+    color: @white;
+  }
+
+  &:active {
+    color: @white;
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    color: @white;
+    background-color: @light-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 134px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 150px;
+    padding: 8px 2px;
+  }
+}
+
+.filters__price-controls {
+  margin-top: 11px;
+}

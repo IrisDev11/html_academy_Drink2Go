@@ -1,0 +1,39 @@
+.submenu {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px 11px 20px;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.submenu__item {
+  margin-bottom: 16px;
+}
+
+.submenu__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: @primary-light;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}

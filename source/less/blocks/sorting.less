@@ -1,0 +1,128 @@
+.sorting {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 280px;
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 728px;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1011px;
+  }
+}
+
+.sorting__heading {
+  margin: 0 10px 10px 0;
+  padding-left: 3px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
+}
+
+.sorting__list {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  background-color: @white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+  }
+}
+
+.sorting__link {
+  display: block;
+  width: 150px;
+  padding: 8px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: @black;
+  text-transform: lowercase;
+  text-decoration: none;
+  border-bottom: 1px solid @base-secondary;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: @base-secondary;
+  }
+}
+
+.sorting__link--current {
+  color: @white;
+  background-color: @base-primary;
+
+  &:hover,
+  &:focus {
+    background-color: @base-primary;
+  }
+}
+
+.sorting__toogle {
+  width: 160px;
+  margin-bottom: 10px;
+  padding: 4px 27px 4px 2px;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-primary;
+  text-transform: lowercase;
+  text-align: right;
+  background-color: transparent;
+  background-image: url("../../img/sorting-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 141px 14px;
+  background-size: 10px 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 30px;
+  }
+}
+
+.sorting__list--closed {
+  display: none;
+}
+
+.sorting__list--opened {
+  display: block;
+}
+
+.sorting__toggle--opened {
+  background-image: url("../../img/sorting-icon-active.svg");
+}
+
+.sorting__list--nojs {
+  position: static;
+  display: block;
+  min-height: 0;
+}

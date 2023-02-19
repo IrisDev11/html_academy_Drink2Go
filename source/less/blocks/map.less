@@ -1,0 +1,21 @@
+.map__image {
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.map__image--hidden {
+  display: flex;
+}
+
+.map__canvas {
+  height: 420px;
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
+  }
+}

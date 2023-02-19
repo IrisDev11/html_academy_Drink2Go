@@ -1,0 +1,90 @@
+.user-nav {
+  position: absolute;
+  top: -1px;
+  right: 19%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 240px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: none;
+    position: static;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-start;
+  }
+}
+
+.user-nav__item {
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
+  }
+}
+
+.user-nav__link {
+  display: flex;
+  padding: 22px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 31px 21px 30px 30px;
+
+    &:hover,
+    &:focus {
+      color: @base-primary;
+    }
+  }
+}
+
+.user-nav__icon {
+  fill: @black;
+}
+
+.user-nav__link:hover .user-nav__icon,
+.user-nav__link:focus .user-nav__icon,
+.user-nav__link:active .user-nav__icon {
+  @media (min-width: @desktop-width) {
+    fill: @base-primary;
+  }
+}
+
+.user-nav__link--account {
+  @media (min-width: @desktop-width) {
+    padding-right: 12px;
+  }
+}
+
+.user-nav__label {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @base-primary;
+    }
+  }
+}

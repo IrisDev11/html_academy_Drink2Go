@@ -1,0 +1,110 @@
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 67px;
+  padding-bottom: 31px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 277px;
+    align-items: start;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 82px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 317px;
+    align-items: center;
+    padding-top: 77px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.feature__title {
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.feature__description {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.feature--speed {
+  background-image: url("../../img/time-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 50px 56px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 10px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    background-position: top;
+  }
+}
+
+.feature--fit {
+  background-image: url("../../img/fit-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 52px 56px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 10px 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: top;
+  }
+}
+
+.feature--energy {
+  background-image: url("../../img/energy-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 42px 56px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 14px 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    background-position: top;
+  }
+}
+
+.feature--ecology {
+  background-image: url("../../img/ecology-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 46px 56px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 12px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: top;
+  }
+}

@@ -110,7 +110,6 @@ const switchesSlides = () => {
     sliderButtons = Array.from(sliderControls.querySelectorAll('.slider__controls-button'));
     sliderNavButtons = Array.from(sliderNav.querySelectorAll('.slider__nav-button'));
     slides = Array.from(slider.querySelectorAll('.slider__item'));
-    console.log(slides);
 
     if (slides && sliderButtons && sliderNavButtons) {
       sliderControls.addEventListener('click', clickSliderControls);
